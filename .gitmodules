@@ -1,0 +1,15 @@
+[submodule "luci-app-bypass"]
+	path = luci-app-bypass
+	url = https://github.com/garypang13/luci-app-bypass.git
+[submodule "luci-app-serverchan"]
+	path = luci-app-serverchan
+	url = https://github.com/tty228/luci-app-serverchan.git
+[submodule "luci-app-dnsfilter"]
+	path = luci-app-dnsfilter
+	url = https://github.com/garypang13/luci-app-dnsfilter.git
+[submodule "luci-app-koolproxyR"]
+	path = luci-app-koolproxyR
+	url = https://github.com/jefferymvp/luci-app-koolproxyR.git
+[submodule "luci-lib-docker"]
+	path = luci-lib-docker
+	url = https://github.com/lisaac/luci-lib-docker.git
