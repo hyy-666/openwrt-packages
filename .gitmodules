@@ -13,3 +13,6 @@
 [submodule "luci-lib-docker"]
 	path = luci-lib-docker
 	url = https://github.com/lisaac/luci-lib-docker.git
+[submodule "smartdns-le"]
+	path = smartdns-le
+	url = https://github.com/garypang13/smartdns-le.git
