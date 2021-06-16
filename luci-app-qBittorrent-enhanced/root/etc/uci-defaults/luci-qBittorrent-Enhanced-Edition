@@ -1,0 +1,21 @@
+#!/bin/sh
+
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@qBittorrentEE[-1]
+	add ucitrack qBittorrentEE
+	set ucitrack.@qBittorrentEE[-1].init=qBittorrentEE
+	commit ucitrack
+EOF
+
+if [ ."$(uci -q get qBittorrentEE.main)" != ."qBittorrentEE" ]; then
+	uci -q batch <<-EOF >/dev/null
+		add qBittorrentEE qBittorrentEE
+		rename qBittorrentEE.@qBittorrentEE[-1]="main"
+		set qBittorrentEE.main.enabled=0
+		set qBittorrentEE.main.profile="/tmp"
+		commit qBittorrentEE
+	EOF
+fi
+
+rm -f /tmp/luci-indexcache
+exit 0
